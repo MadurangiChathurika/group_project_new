@@ -32,13 +32,13 @@ public class  AdminController {
     @GetMapping("signup/student")
     public String signupStudent(Model model){
         model.addAttribute("user",new User());
-        return "admin/Registration/RegisterStudent";
+        return "signupStudent";
     }
 
     @GetMapping("signup/teacher")
     public String signupTeacher(Model model) {
         model.addAttribute("user",new User());
-        return "admin/Registration/RegisterTeacher";
+        return "admin/signupStudent";
     }
 
    @PostMapping("signup/student")
@@ -65,17 +65,12 @@ public class  AdminController {
 
     @GetMapping("student/crud")
     public String studentCrud(){
-        return "admin/studentsList";
+        return "admin/studentCrud";
     }
 
     @GetMapping("teacher/crud")
     public String teachercrud(){
         return "admin/teacherCrud";
-    }
-
-    @GetMapping("showStudents")
-    public String showStudents(){
-        return "admin/showStudents";
     }
 
     @GetMapping("email")
